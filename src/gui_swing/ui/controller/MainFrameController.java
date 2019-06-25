@@ -26,25 +26,14 @@ public class MainFrameController {
     private JButton haben;
     private JButton auch;
     private JButton sein;
-    private JLabel koennenLabel;
-    private JLabel auchLabel;
-    private JLabel habenLabel;
-    private JLabel undLabel;
-    private JLabel ichLabel;
-    private JLabel duLabel;
-    private JLabel wirLabel;
-    private JLabel dasLabel;
-    private JLabel nichtLabel;
-    private JLabel seinLabel;
-    private JLabel moechtenLabel;
-    private JLabel oderLabel;
-    TextToSpeech tts = new TextToSpeech();
+    private JButton adjektive;
+    private JButton kategorie1;
+    private TextToSpeech tts = new TextToSpeech();
 
     public MainFrameController() {
         initComponents();
         initListeners();
         mainFrame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-
     }
 
     private void initComponents() {
@@ -65,23 +54,66 @@ public class MainFrameController {
         nichtButton = mainFrame.getNichtButton();
         haben = mainFrame.getHaben();
         auch = mainFrame.getAuch();
-        undLabel = mainFrame.getUndLabel();
-        ichLabel = mainFrame.getIchLabel();
-        duLabel = mainFrame.getDuLabel();
-        wirLabel = mainFrame.getWirLabel();
-        dasLabel = mainFrame.getDasLabel();
-        nichtLabel = mainFrame.getNichtLabel();
-        koennenLabel = mainFrame.getKoennenLabel();
-        auchLabel = mainFrame.getAuchLabel();
-        habenLabel = mainFrame.getHabenLabel();
-        seinLabel = mainFrame.getSeinLabel();
-        moechtenLabel = mainFrame.getMoechtenLabel();
-        oderLabel = mainFrame.getOderLabel();
+        adjektive = mainFrame.getAdjektive();
         setVoice();
-
     }
 
-    public void setVoice() {
+    private void makeChange(int x){
+        switch (x) {
+            case 0:
+                mainFrame.kategorieAdjektive();
+                break;
+            case 1:
+
+                break;
+            case 2:
+
+                break;
+            case 3:
+
+                break;
+            case 4:
+
+                break;
+            case 5:
+
+                break;
+            case 6:
+
+                break;
+            case 7:
+
+                break;
+            case 8:
+
+                break;
+            case 9:
+
+                break;
+            case 10:
+
+                break;
+            case 11:
+
+                break;
+
+            case 12:
+
+                break;
+            case 13:
+
+                break;
+            case 14:
+
+                break;
+            case 15:
+
+                break;
+            default:
+        }
+    }
+
+    private void setVoice() {
         switch (setVoiceBox.getSelectedIndex()) {
             case 0:
                 tts.setVoice("bits1-hsmm");
@@ -102,7 +134,6 @@ public class MainFrameController {
     private static String addText(String o) {
         output = output + " " + o;
         return output;
-
     }
 
     /**
@@ -129,6 +160,16 @@ public class MainFrameController {
         delete.addActionListener(new deleteListener());
         und.addActionListener(new undListener());
         send.addActionListener(new sendListener());
+
+
+        adjektive.addActionListener(new adjektiveListener());
+    }
+
+    private class setVoiceBoxListener implements ActionListener {
+        @Override
+        public void actionPerformed(ActionEvent e) {
+            setVoice();
+        }
     }
 
     private class deleteListener implements ActionListener {
@@ -140,6 +181,15 @@ public class MainFrameController {
         }
     }
 
+    private class sendListener implements ActionListener {
+        @Override
+        public void actionPerformed(ActionEvent actionEvent) {
+            if (ausgabeTextField.getText().lastIndexOf(" ") != -1) {
+                voiceAusgeben(ausgabeTextField.getText());
+            }
+        }
+    }
+
     private class undListener implements ActionListener {
         @Override
         public void actionPerformed(ActionEvent actionEvent) {
@@ -147,20 +197,10 @@ public class MainFrameController {
         }
     }
 
-
-    private class setVoiceBoxListener implements ActionListener {
-        @Override
-        public void actionPerformed(ActionEvent e) {
-                setVoice();
-            }
-        }
-
-    private class sendListener implements ActionListener {
+    private class adjektiveListener implements ActionListener {
         @Override
         public void actionPerformed(ActionEvent actionEvent) {
-            if (ausgabeTextField.getText().lastIndexOf(" ") != -1) {
-                voiceAusgeben(ausgabeTextField.getText());
-            }
+            makeChange(0);
         }
     }
 }

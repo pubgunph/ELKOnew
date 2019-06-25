@@ -8,25 +8,8 @@ import java.io.File;
 import java.io.IOException;
 
 public class MainFrame extends JFrame {
-    private static JButton createButtonImage(JButton button, String src) {
-        BufferedImage myPicture = null;
-        Image newimg = null;
-
-        try {
-            myPicture = ImageIO.read(new File(src));
-            newimg = myPicture.getScaledInstance(50, 50, java.awt.Image.SCALE_SMOOTH);
-
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
-        button.setIcon(new ImageIcon(newimg));
-        button.setBorder(BorderFactory.createEmptyBorder());
-        button.setContentAreaFilled(false);
-        return button;
-    }
-
-    public static final int WIDTH = 700;
-    public static final int HEIGHT = 700;
+    public static final int WIDTH = 850;
+    public static final int HEIGHT = 600;
     private JTextField ausgabeTextField;
     private JComboBox setVoiceBox;
     private JPanel mainPanel;
@@ -44,23 +27,72 @@ public class MainFrame extends JFrame {
     private JButton haben;
     private JButton auch;
     private JButton sein;
-    private JLabel undLabel;
-    private JLabel ichLabel;
-    private JLabel duLabel;
-    private JLabel wirLabel;
-    private JLabel dasLabel;
-    private JLabel nichtLabel;
-    private JLabel koennenLabel;
-    private JLabel auchLabel;
-    private JLabel habenLabel;
-    private JLabel seinLabel;
-    private JLabel moechtenLabel;
-    private JLabel oderLabel;
+    private JButton adjektive;
+    private JButton returnButton;
+    private JButton aktivitaeten;
+    private JButton beduerfnisse;
+    private JButton farben;
+    private JButton floskeln;
+    private JButton gefuehle;
+    private JButton fragen;
+    private JButton kleidung;
+    private JButton koerper;
+    private JButton orte;
+    private JButton personen;
+    private JButton verben;
+    private JButton zahlen;
+    private JButton kategorie1;
+    private JButton mit;
+    private JButton in;
+    private JButton ein;
+    private JButton was;
+    private JButton mich;
+    private JButton weil;
+    private JButton bitte;
+    private JButton da;
+    private JButton jetzt;
+    private JButton hier;
+    private JButton noch;
+    private JButton mal;
+    private JButton praepositon;
 
+    /**
+     *
+     * Constructor
+     */
     public MainFrame() {
         setSize(WIDTH, HEIGHT);
+        setMinimumSize(new Dimension(WIDTH, HEIGHT));
         setContentPane(mainPanel);
         setLocationRelativeTo(null);
+
+    }
+
+    private JButton createButtonImage(JButton button, String src) {
+        BufferedImage myPicture = null;
+        Image newimg = null;
+
+        try {
+            myPicture = ImageIO.read(new File(src));
+            newimg = myPicture.getScaledInstance(50, 50, java.awt.Image.SCALE_SMOOTH);
+
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+        button.setIcon(new ImageIcon(newimg));
+        button.setBorder(BorderFactory.createEmptyBorder());
+        button.setContentAreaFilled(false);
+        return button;
+    }
+
+    public void kategorieAdjektive() {
+        createButtonImage(adjektive, "src/Pictos/Adjektive/alt.png");
+        createButtonImage(aktivitaeten, "src/Pictos/Adjektive/cool.png");
+    }
+
+      public JButton getAdjektive() {
+        createButtonImage(adjektive, "src/Pictos/KategorieAdjektive.png");
+        return adjektive;
     }
 
     public JComboBox getSetVoiceBox() {
@@ -82,18 +114,6 @@ public class MainFrame extends JFrame {
         return koennen;
     }
 
-    public JLabel getKoennenLabel() {
-        return koennenLabel;
-    }
-
-    public JLabel getAuchLabel() {
-        return auchLabel;
-    }
-
-    public JLabel getHabenLabel() {
-        return habenLabel;
-    }
-
     public JButton getHaben() {
         return haben;
     }
@@ -102,20 +122,8 @@ public class MainFrame extends JFrame {
         return auch;
     }
 
-    public JLabel getSeinLabel() {
-        return seinLabel;
-    }
-
     public JButton getSein() {
         return sein;
-    }
-
-    public JLabel getMoechtenLabel() {
-        return moechtenLabel;
-    }
-
-    public JLabel getOderLabel() {
-        return oderLabel;
     }
 
     public JButton getDelete() {
@@ -154,6 +162,7 @@ public class MainFrame extends JFrame {
     }
 
     public JTextField getAusgabeTextField() {
+        ausgabeTextField.setEditable(false);
         return ausgabeTextField;
     }
 
@@ -161,30 +170,5 @@ public class MainFrame extends JFrame {
         createButtonImage(nichtButton, "src/Pictos/nicht.png");
         return nichtButton;
     }
-
-    public JLabel getUndLabel() {
-        return undLabel;
-    }
-
-    public JLabel getIchLabel() {
-        return ichLabel;
-    }
-
-    public JLabel getDuLabel() {
-        return duLabel;
-    }
-
-    public JLabel getWirLabel() {
-        return wirLabel;
-    }
-
-    public JLabel getDasLabel() {
-        return dasLabel;
-    }
-
-    public JLabel getNichtLabel() {
-        return nichtLabel;
-    }
-
 
 }
