@@ -86,8 +86,21 @@ public class MainFrame extends JFrame {
     }
 
     public void kategorieAdjektive() {
-        createButtonImage(adjektive, "src/Pictos/Adjektive/alt.png");
-        createButtonImage(aktivitaeten, "src/Pictos/Adjektive/cool.png");
+        createButtonImage(adjektive, "src/Pictos/Adjektive/heiß.png");
+        createButtonImage(aktivitaeten, "src/Pictos/Adjektive/schwer.png");
+        createButtonImage(beduerfnisse, "src/Pictos/Adjektive/laut.png");
+        createButtonImage(farben, "src/Pictos/Adjektive/kalt.png");
+        createButtonImage(floskeln, "src/Pictos/Adjektive/neu.png");
+        createButtonImage(gefuehle, "src/Pictos/Adjektive/gleich.png");
+        createButtonImage(fragen, "src/Pictos/Adjektive/cool.png");
+        createButtonImage(kleidung, "src/Pictos/Adjektive/alt.png");
+        createButtonImage(koerper, "src/Pictos/Adjektive/gut.png");
+        createButtonImage(orte, "src/Pictos/Adjektive/lang.png");
+        createButtonImage(personen, "src/Pictos/Adjektive/voll.png");
+        createButtonImage(praepositionen, "src/Pictos/Adjektive/schlecht.png");
+        createButtonImage(verben, "src/Pictos/Adjektive/schnell.png");
+        createButtonImage(zahlen, "src/Pictos/Adjektive/schön.png");
+        createButtonImage(kategorie1, "src/Pictos/Adjektive/vorsichtig.png");
     }
 
       public JButton getAdjektive() {
