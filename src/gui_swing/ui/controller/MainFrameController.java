@@ -82,33 +82,29 @@ public class MainFrameController {
             	mainFrame.kategorieFragen();
                 break;
             case 7:
-
+            	mainFrame.kategorieKleidung();
                 break;
             case 8:
-
+            	mainFrme.kategorieKoerper();
                 break;
             case 9:
-
+            	mainFrame.kategorieOrte();
                 break;
             case 10:
-
+            	mainFame.kategoriePersonen();
                 break;
             case 11:
-
+            	mainFrame.kategoriePraepositionen();
                 break;
-
             case 12:
-
+            	mainFrame.kategorieVerben();
                 break;
             case 13:
-
-                break;
-            case 14:
-
-                break;
-            case 15:
-
-                break;
+            	mainFrame.kategorieZahlen();
+            	break;
+            case 14;
+            	mainFrame.kategorieUebersicht();
+            	break;
             default:
         }
     }
