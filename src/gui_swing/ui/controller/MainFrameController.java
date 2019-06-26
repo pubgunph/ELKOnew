@@ -64,22 +64,22 @@ public class MainFrameController {
                 mainFrame.kategorieAdjektive();
                 break;
             case 1:
-
+            	mainFrame.kategorieAktivitaeten();
                 break;
             case 2:
-
+            	mainFrame.kategorieBeduerfnisse();
                 break;
             case 3:
-
+            	mainFrame.kategorieFarben();
                 break;
             case 4:
-
+            	mainFrame.kategorieFloskeln();
                 break;
             case 5:
-
+            	mainFrame.kategorieGefuhele();
                 break;
             case 6:
-
+            	mainFrame.kategorieFragen();
                 break;
             case 7:
 

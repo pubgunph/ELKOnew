@@ -102,7 +102,116 @@ public class MainFrame extends JFrame {
         createButtonImage(zahlen, "src/Pictos/Adjektive/schön.png");
         createButtonImage(kategorie1, "src/Pictos/Adjektive/vorsichtig.png");
     }
+    
+    public void kategorieAktivitaeten() {
+        createButtonImage(adjektive, "src/Pictos/Aktivitäten/arbeiten.png");
+        createButtonImage(aktivitaeten, "src/Pictos/Aktivitäten/putzen.png");
+        createButtonImage(beduerfnisse, "src/Pictos/Aktivitäten/aufräumen.png");
+        createButtonImage(farben, "src/Pictos/Aktivitäten/kochen.png");
+        createButtonImage(floskeln, "src/Pictos/Aktivitäten/fahren.png");
+        createButtonImage(gefuehle, "src/Pictos/Aktivitäten/fernsehen.png");
+        createButtonImage(fragen, "src/Pictos/Aktivitäten/waschen.png");
+        createButtonImage(kleidung, "src/Pictos/Aktivitäten/gehen.png");
+        createButtonImage(koerper, "src/Pictos/Aktivitäten/schlafen.png");
+        createButtonImage(orte, "src/Pictos/Aktivitäten/lesen.png");
+        createButtonImage(personen, "src/Pictos/Aktivitäten/schwimmen.png");
+        createButtonImage(praepositionen, "src/Pictos/Aktivitäten/spazieren.png");
+        createButtonImage(verben, "src/Pictos/Aktivitäten/malen.png");
+        createButtonImage(zahlen, "src/Pictos/Aktivitäten/Quidditch.png");
+        createButtonImage(kategorie1, "src/Pictos/Aktivitäten/spielen.png");
+    }
+    
+    public void kategorieBeduerfnisse() {
+        createButtonImage(adjektive, "src/Pictos/Adjektive/essen.png");
+        createButtonImage(aktivitaeten, "src/Pictos/Adjektive/baden.png");
+        createButtonImage(beduerfnisse, "src/Pictos/Adjektive/duschen.png");
+        createButtonImage(farben, "src/Pictos/Adjektive/trinken.png");
+        createButtonImage(floskeln, "src/Pictos/Adjektive/gesund.png");
+        createButtonImage(gefuehle, "src/Pictos/Adjektive/Husten.png");
+        createButtonImage(fragen, "src/Pictos/Adjektive/Medikament.png");
+        createButtonImage(kleidung, "src/Pictos/Adjektive/krank.png");
+        createButtonImage(koerper, "src/Pictos/Adjektive/Pipi.png");
+        createButtonImage(orte, "src/Pictos/Adjektive/Schmerzen.png");
+        createButtonImage(personen, "src/Pictos/Adjektive/Schnupfen.png");
+        createButtonImage(praepositionen, "src/Pictos/Adjektive/Stinker.png");
+        createButtonImage(verben, "src/Pictos/Adjektive/schwindelig.png");
+        createButtonImage(zahlen, "src/Pictos/Adjektive/Anfall.png");
+        createButtonImage(kategorie1, "src/Pictos/Adjektive/verletzt.png");
+    }
 
+    public void kategorieFarben() {
+        createButtonImage(adjektive, "src/Pictos/Farben/hell.png");
+        createButtonImage(aktivitaeten, "src/Pictos/Farben/weiß.png");
+        createButtonImage(beduerfnisse, "src/Pictos/Farben/schwarz.png");
+        createButtonImage(farben, "src/Pictos/Farben/dunkel.png");
+        createButtonImage(floskeln, "src/Pictos/Farben/blau.png");
+        createButtonImage(gefuehle, "src/Pictos/Farben/rot.png");
+        createButtonImage(fragen, "src/Pictos/Farben/gelb.png");
+        createButtonImage(kleidung, "src/Pictos/Farben/grün.png");
+        createButtonImage(koerper, "src/Pictos/Farben/lila.png");
+        createButtonImage(orte, "src/Pictos/Farben/orange.png");
+        createButtonImage(personen, "src/Pictos/Farben/rosa.png");
+        createButtonImage(praepositionen, "src/Pictos/Farben/bunt.png");
+        createButtonImage(verben, "src/Pictos/Farben/braun.png");
+        createButtonImage(zahlen, "src/Pictos/Farben/grau.png");
+        createButtonImage(kategorie1, "src/Pictos/Zahlen/0.png"); //muesste man irgendwie leer setzen
+    }
+    
+    public void kategorieFloskeln() {
+        createButtonImage(adjektive, "src/Pictos/Floskeln/hell.png");
+        createButtonImage(aktivitaeten, "src/Pictos/Zahlen/0.png");
+        createButtonImage(beduerfnisse, "src/Pictos/Zahlen/0.png");
+        createButtonImage(farben, "src/Pictos/Floskeln/Tschüss.png");
+        createButtonImage(floskeln, "src/Pictos/Floskeln/Entschuldigung.png");
+        createButtonImage(gefuehle, "src/Pictos/Floskeln/Danke.png");
+        createButtonImage(fragen, "src/Pictos/Zahlen/0.png");
+        createButtonImage(kleidung, "src/Pictos/Floskeln/fertig.png");
+        createButtonImage(koerper, "src/Pictos/Zahlen/0.png");
+        createButtonImage(orte, "src/Pictos/Zahlen/0.png");
+        createButtonImage(personen, "src/Pictos/Floskeln/Quatsch.png");
+        createButtonImage(praepositionen, "src/Pictos/Floskeln/Blödsinn.png");
+        createButtonImage(verben, "src/Pictos/Floskeln/Arschloch.png");
+        createButtonImage(zahlen, "src/Pictos/Floskeln/Blödmann.png");
+        createButtonImage(kategorie1, "src/Pictos/Floskeln/Dummkopf.png");
+    }
+    
+    public void kategorieGefuehle() {
+        createButtonImage(adjektive, "src/Pictos/Gefühle/Angst.png");
+        createButtonImage(aktivitaeten, "src/Pictos/Gefühle/traurig.png");
+        createButtonImage(beduerfnisse, "src/Pictos/Gefühle/überrascht.png");
+        createButtonImage(farben, "src/Pictos/Gefühle/fröhlich.png");
+        createButtonImage(floskeln, "src/Pictos/Gefühle/weinen.png");
+        createButtonImage(gefuehle, "src/Pictos/Gefühle/langweilig.png");
+        createButtonImage(fragen, "src/Pictos/Gefühle/glücklich.png");
+        createButtonImage(kleidung, "src/Pictos/Gefühle/lachen.png");
+        createButtonImage(koerper, "src/Pictos/Gefühle/müde.png");
+        createButtonImage(orte, "src/Pictos/Gefühle/wütend.png");
+        createButtonImage(personen, "src/Pictos/Gefühle/neugierig.png");
+        createButtonImage(praepositionen, "src/Pictos/Gefühle/wach.png");
+        createButtonImage(verben, "src/Pictos/Gefühle/verliebt.png");
+        createButtonImage(zahlen, "src/Pictos/Gefühle/übel.png");
+        createButtonImage(kategorie1, "src/Pictos/Zahlen/0.png");
+    }
+    
+    public void kategorieFragen() {
+        createButtonImage(adjektive, "src/Pictos/KategorieFragen/wie.png");
+        createButtonImage(aktivitaeten, "src/Pictos/KategorieFragen/warum.png");
+        createButtonImage(beduerfnisse, "src/Pictos/KategorieFragen/welche.png");
+        createButtonImage(farben, "src/Pictos/KategorieFragen/wer.png");
+        createButtonImage(floskeln, "src/Pictos/KategorieFragen/wo.png");
+        createButtonImage(gefuehle, "src/Pictos/KategorieFragen/dürfen.png");
+        createButtonImage(fragen, "src/Pictos/KategorieFragen/machen.png");
+        createButtonImage(kleidung, "src/Pictos/KategorieFragen/müssen.png");
+        createButtonImage(koerper, "src/Pictos/KategorieFragen/mögen.png");
+        createButtonImage(orte, "src/Pictos/KategorieFragen/hören.png");
+        createButtonImage(personen, "src/Pictos/KategorieFragen/sehen.png");
+        createButtonImage(praepositionen, "src/Pictos/KategorieFragen/lassen.png");
+        createButtonImage(verben, "src/Pictos/KategorieFragen/kommen.png");
+        createButtonImage(zahlen, "src/Pictos/KategorieFragen/geben.png");
+        createButtonImage(kategorie1, "src/Pictos/KategorieFragen/wissen.png");
+    }
+    
+    
       public JButton getAdjektive() {
         createButtonImage(adjektive, "src/Pictos/KategorieAdjektive.png");
         return adjektive;
