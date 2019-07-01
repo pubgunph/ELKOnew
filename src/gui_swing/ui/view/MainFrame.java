@@ -8,7 +8,7 @@ import java.io.File;
 import java.io.IOException;
 
 public class MainFrame extends JFrame {
-    public static final int WIDTH = 850;
+    public static final int WIDTH = 800;
     public static final int HEIGHT = 600;
     private JTextField ausgabeTextField;
     private JComboBox setVoiceBox;
@@ -87,6 +87,7 @@ public class MainFrame extends JFrame {
 
     public void kategorieAdjektive() {
         createButtonImage(adjektive, "src/Pictos/Adjektive/heiss.png");
+        adjektive.setText("heiss");
         createButtonImage(aktivitaeten, "src/Pictos/Adjektive/schwer.png");
         createButtonImage(beduerfnisse, "src/Pictos/Adjektive/laut.png");
         createButtonImage(farben, "src/Pictos/Adjektive/kalt.png");
@@ -354,6 +355,35 @@ public class MainFrame extends JFrame {
         createButtonImage(zahlen, "src/Pictos/KategorieZahlen.png");
         createButtonImage(kategorie1, "src/Pictos/Zahlen/0.png");
     }
+
+    public void returnButtonUebersicht() {
+        getAdjektive();
+        adjektive.setText("Adjektive");
+        getAktivitaeten();
+        aktivitaeten.setText("Aktivitäten");
+        getBeduerfnisse();
+        beduerfnisse.setText("Bedürfnisse");
+        getFarben();
+        farben.setText("Farben");
+        getFloskeln();
+        floskeln.setText("Floskeln");
+        getGefuehle();
+        gefuehle.setText("gefuehle");
+        getFragen();
+        fragen.setText("Fragen");
+        getOrte();
+        orte.setText("Orte");
+        getPersonen();
+        personen.setText("Personen");
+        getPraepositionen();
+        praepositionen.setText("Präpositionen");
+        getVerben();
+        verben.setText("Verben");
+        getZahlen();
+        zahlen.setText("Zahlen");
+        getKategorie1();
+        kategorie1.setText("");
+    }
     
     
       public JButton getAdjektive() {
@@ -364,7 +394,7 @@ public class MainFrame extends JFrame {
       public JButton getAktivitaeten() {
           createButtonImage(aktivitaeten, "src/Pictos/KategorieAktivitaeten.png");
           return aktivitaeten;
-        }
+    }
       
       public JButton getBeduerfnisse() {
           createButtonImage(beduerfnisse, "src/Pictos/KategorieBeduerfnisse.png");
@@ -382,7 +412,7 @@ public class MainFrame extends JFrame {
         }
       
       public JButton getGefuehle() {
-          createButtonImage(gefuehle, "src/Pictos/KategorieGef�hle.png");
+          createButtonImage(gefuehle, "src/Pictos/KategorieGefuehle.png");
           return gefuehle;
         }
       
@@ -397,7 +427,7 @@ public class MainFrame extends JFrame {
         }
       
       public JButton getKoerper() {
-          createButtonImage(koerper, "src/Pictos/KategorieK�rper.png");
+          createButtonImage(koerper, "src/Pictos/KategorieKoerper.png");
           return koerper;
         }
       
@@ -412,7 +442,7 @@ public class MainFrame extends JFrame {
         }
       
       public JButton getPraepositionen() {
-          createButtonImage(praepositionen, "src/Pictos/KategoriePr�positionen.png");
+          createButtonImage(praepositionen, "src/Pictos/KategoriePraepositionen.png");
           return praepositionen;
         }
       
@@ -509,12 +539,12 @@ public class MainFrame extends JFrame {
     }
 
     public JButton getReturnButton() {
-        createButtonImage(returnButton, "src/Pictos/FKT zuruek.png");
+        createButtonImage(returnButton, "src/Pictos/FKT zurueck.png");
         return returnButton;
     }
 
     public JButton getKategorie1() {
-        createButtonImage((returnButton, "src/Pictos/Zahlen/0.png"))
+        createButtonImage(kategorie1, "src/Pictos/Zahlen/0.png");
         return kategorie1;
     }
 
@@ -524,7 +554,7 @@ public class MainFrame extends JFrame {
     }
 
     public JButton getIn() {
-        createButtonImage(in, "src/Pictos/in.png");
+        createButtonImage(in, "src/Pictos/ein.png");
         return in;
     }
 
@@ -559,7 +589,7 @@ public class MainFrame extends JFrame {
     }
 
     public JButton getJetzt() {
-        createButtonImage(jetzt, "src/Pictos/jett.png");
+        createButtonImage(jetzt, "src/Pictos/jetzt.png");
         return jetzt;
     }
 

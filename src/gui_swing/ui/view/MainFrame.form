@@ -87,7 +87,9 @@
       </component>
       <component id="409ac" class="javax.swing.JButton" binding="adjektive">
         <constraints>
-          <grid row="2" column="4" row-span="2" col-span="1" vsize-policy="0" hsize-policy="3" anchor="1" fill="1" indent="0" use-parent-layout="false"/>
+          <grid row="2" column="4" row-span="2" col-span="1" vsize-policy="0" hsize-policy="3" anchor="1" fill="1" indent="0" use-parent-layout="false">
+            <preferred-size width="14" height="30"/>
+          </grid>
         </constraints>
         <properties>
           <horizontalTextPosition value="0"/>
@@ -186,7 +188,9 @@
       </component>
       <component id="76d62" class="javax.swing.JButton" binding="floskeln">
         <constraints>
-          <grid row="4" column="4" row-span="2" col-span="1" vsize-policy="0" hsize-policy="3" anchor="1" fill="1" indent="0" use-parent-layout="false"/>
+          <grid row="4" column="4" row-span="2" col-span="1" vsize-policy="0" hsize-policy="3" anchor="1" fill="1" indent="0" use-parent-layout="false">
+            <preferred-size width="14" height="30"/>
+          </grid>
         </constraints>
         <properties>
           <horizontalTextPosition value="0"/>
@@ -296,7 +300,9 @@
       </component>
       <component id="19628" class="javax.swing.JButton" binding="verben">
         <constraints>
-          <grid row="8" column="4" row-span="2" col-span="1" vsize-policy="0" hsize-policy="3" anchor="1" fill="1" indent="0" use-parent-layout="false"/>
+          <grid row="8" column="4" row-span="2" col-span="1" vsize-policy="0" hsize-policy="3" anchor="1" fill="1" indent="0" use-parent-layout="false">
+            <preferred-size width="14" height="30"/>
+          </grid>
         </constraints>
         <properties>
           <horizontalTextPosition value="0"/>
@@ -362,7 +368,9 @@
       </component>
       <component id="621a7" class="javax.swing.JButton" binding="koerper">
         <constraints>
-          <grid row="6" column="4" row-span="2" col-span="1" vsize-policy="0" hsize-policy="3" anchor="1" fill="1" indent="0" use-parent-layout="false"/>
+          <grid row="6" column="4" row-span="2" col-span="1" vsize-policy="0" hsize-policy="3" anchor="1" fill="1" indent="0" use-parent-layout="false">
+            <preferred-size width="14" height="30"/>
+          </grid>
         </constraints>
         <properties>
           <horizontalTextPosition value="0"/>
@@ -479,19 +487,21 @@
           <verticalTextPosition value="3"/>
         </properties>
       </component>
-      <component id="a358f" class="javax.swing.JLabel">
-        <constraints>
-          <grid row="0" column="4" row-span="1" col-span="1" vsize-policy="0" hsize-policy="0" anchor="0" fill="0" indent="0" use-parent-layout="false"/>
-        </constraints>
-        <properties>
-          <text value="Kommunikationstafel"/>
-        </properties>
-      </component>
       <component id="a7ab2" class="javax.swing.JComboBox" binding="setVoiceBox">
         <constraints>
           <grid row="0" column="7" row-span="1" col-span="1" vsize-policy="0" hsize-policy="2" anchor="8" fill="1" indent="0" use-parent-layout="false"/>
         </constraints>
         <properties/>
+      </component>
+      <component id="a358f" class="javax.swing.JLabel">
+        <constraints>
+          <grid row="0" column="2" row-span="1" col-span="4" vsize-policy="0" hsize-policy="0" anchor="0" fill="0" indent="0" use-parent-layout="false">
+            <preferred-size width="14" height="18"/>
+          </grid>
+        </constraints>
+        <properties>
+          <text value="Kommunikationstafel"/>
+        </properties>
       </component>
     </children>
   </grid>

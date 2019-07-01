@@ -81,35 +81,34 @@ public class MainFrameController {
         haben = mainFrame.getHaben();
         auch = mainFrame.getAuch();
         adjektive = mainFrame.getAdjektive();
-
         sein = mainFrame.getSein();
-        private JButton returnButton;
-        private JButton aktivitaeten;
-        private JButton beduerfnisse;
-        private JButton farben;
-        private JButton floskeln;
-        private JButton gefuehle;
-        private JButton fragen;
-        private JButton kleidung;
-        private JButton koerper;
-        private JButton orte;
-        private JButton personen;
-        private JButton verben;
-        private JButton zahlen;
-        private JButton kategorie1;
-        private JButton mit;
-        private JButton in;
-        private JButton ein;
-        private JButton was;
-        private JButton mich;
-        private JButton weil;
-        private JButton bitte;
-        private JButton da;
-        private JButton jetzt;
-        private JButton hier;
-        private JButton noch;
-        private JButton mal;
-        private JButton praepositionen;
+        returnButton = mainFrame.getReturnButton();
+        aktivitaeten = mainFrame.getAktivitaeten();
+        beduerfnisse = mainFrame.getBeduerfnisse();
+        farben = mainFrame.getFarben();
+        floskeln = mainFrame.getFloskeln();
+        gefuehle = mainFrame.getGefuehle();
+        fragen = mainFrame.getFragen();
+        kleidung = mainFrame.getKleidung();
+        koerper = mainFrame.getKoerper();
+        orte = mainFrame.getOrte();
+        personen = mainFrame.getPersonen();
+        verben = mainFrame.getVerben();
+        zahlen = mainFrame.getZahlen();
+        kategorie1 = mainFrame.getKategorie1();
+        mit = mainFrame.getMit();
+        in = mainFrame.getIn();
+        ein = mainFrame.getEin();
+        was = mainFrame.getWas();
+        mich = mainFrame.getMich();
+        weil = mainFrame.getWeil();
+        bitte = mainFrame.getBitte();
+        da = mainFrame.getDa();
+        jetzt = mainFrame.getJetzt();
+        hier = mainFrame.getHier();
+        noch = mainFrame.getNoch();
+        mal = mainFrame.getMal();
+        praepositionen = mainFrame.getPraepositionen();
         setVoice();
     }
 
@@ -211,6 +210,7 @@ public class MainFrameController {
         delete.addActionListener(new deleteListener());
         und.addActionListener(new undListener());
         send.addActionListener(new sendListener());
+        returnButton.addActionListener(new returnButtonListener());
 
 
         adjektive.addActionListener(new adjektiveListener());
@@ -252,6 +252,14 @@ public class MainFrameController {
         @Override
         public void actionPerformed(ActionEvent actionEvent) {
             makeChange(0);
+        }
+    }
+
+
+    private class returnButtonListener implements ActionListener {
+        @Override
+        public void actionPerformed(ActionEvent actionEvent) {
+            mainFrame.returnButtonUebersicht();
         }
     }
 }
