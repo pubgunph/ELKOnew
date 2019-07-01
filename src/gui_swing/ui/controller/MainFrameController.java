@@ -19,15 +19,41 @@ public class MainFrameController {
     private JButton wir;
     private JButton das;
     private JButton send;
-    private JButton nichtButton;
     private JButton oder;
     private JButton moechten;
     private JButton koennen;
+    private JButton nichtButton;
     private JButton haben;
     private JButton auch;
     private JButton sein;
     private JButton adjektive;
+    private JButton returnButton;
+    private JButton aktivitaeten;
+    private JButton beduerfnisse;
+    private JButton farben;
+    private JButton floskeln;
+    private JButton gefuehle;
+    private JButton fragen;
+    private JButton kleidung;
+    private JButton koerper;
+    private JButton orte;
+    private JButton personen;
+    private JButton verben;
+    private JButton zahlen;
     private JButton kategorie1;
+    private JButton mit;
+    private JButton in;
+    private JButton ein;
+    private JButton was;
+    private JButton mich;
+    private JButton weil;
+    private JButton bitte;
+    private JButton da;
+    private JButton jetzt;
+    private JButton hier;
+    private JButton noch;
+    private JButton mal;
+    private JButton praepositionen;
     private TextToSpeech tts = new TextToSpeech();
 
     public MainFrameController() {
@@ -55,6 +81,35 @@ public class MainFrameController {
         haben = mainFrame.getHaben();
         auch = mainFrame.getAuch();
         adjektive = mainFrame.getAdjektive();
+
+        sein = mainFrame.getSein();
+        private JButton returnButton;
+        private JButton aktivitaeten;
+        private JButton beduerfnisse;
+        private JButton farben;
+        private JButton floskeln;
+        private JButton gefuehle;
+        private JButton fragen;
+        private JButton kleidung;
+        private JButton koerper;
+        private JButton orte;
+        private JButton personen;
+        private JButton verben;
+        private JButton zahlen;
+        private JButton kategorie1;
+        private JButton mit;
+        private JButton in;
+        private JButton ein;
+        private JButton was;
+        private JButton mich;
+        private JButton weil;
+        private JButton bitte;
+        private JButton da;
+        private JButton jetzt;
+        private JButton hier;
+        private JButton noch;
+        private JButton mal;
+        private JButton praepositionen;
         setVoice();
     }
 
@@ -76,7 +131,7 @@ public class MainFrameController {
             	mainFrame.kategorieFloskeln();
                 break;
             case 5:
-            	mainFrame.kategorieGefuhele();
+            	mainFrame.kategorieGefuehle();
                 break;
             case 6:
             	mainFrame.kategorieFragen();
@@ -85,13 +140,13 @@ public class MainFrameController {
             	mainFrame.kategorieKleidung();
                 break;
             case 8:
-            	mainFrme.kategorieKoerper();
+            	mainFrame.kategorieKoerper();
                 break;
             case 9:
             	mainFrame.kategorieOrte();
                 break;
             case 10:
-            	mainFame.kategoriePersonen();
+            	mainFrame.kategoriePersonen();
                 break;
             case 11:
             	mainFrame.kategoriePraepositionen();
@@ -102,7 +157,7 @@ public class MainFrameController {
             case 13:
             	mainFrame.kategorieZahlen();
             	break;
-            case 14;
+            case 14:
             	mainFrame.kategorieUebersicht();
             	break;
             default:
