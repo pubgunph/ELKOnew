@@ -8,8 +8,8 @@ import java.io.File;
 import java.io.IOException;
 
 public class MainFrame extends JFrame {
-    public static final int WIDTH = 800;
-    public static final int HEIGHT = 600;
+    private static final int WIDTH = 800;
+    private static final int HEIGHT = 600;
     private JTextField ausgabeTextField;
     private JComboBox setVoiceBox;
     private JPanel mainPanel;
@@ -57,7 +57,6 @@ public class MainFrame extends JFrame {
     private JButton praepositionen;
 
     /**
-     *
      * Constructor
      */
     public MainFrame() {
@@ -68,8 +67,8 @@ public class MainFrame extends JFrame {
 
     }
 
-    private JButton createButtonImage(JButton button, String src) {
-        BufferedImage myPicture = null;
+    private void createButtonImage(JButton button, String src) {
+        BufferedImage myPicture;
         Image newimg = null;
 
         try {
@@ -82,7 +81,17 @@ public class MainFrame extends JFrame {
         button.setIcon(new ImageIcon(newimg));
         button.setBorder(BorderFactory.createEmptyBorder());
         button.setContentAreaFilled(false);
-        return button;
+    }
+
+    private BufferedImage createTransparentImage (){
+        return new BufferedImage(50, 50, BufferedImage.TYPE_INT_ARGB);
+    }
+
+    private void setInvisibleButton(JButton button){
+        button.setOpaque(false);
+        button.setContentAreaFilled(false);
+        button.setBorderPainted(false);
+        button.setIcon(new ImageIcon(createTransparentImage()));
     }
 
     public void kategorieAdjektive() {
@@ -103,7 +112,7 @@ public class MainFrame extends JFrame {
         createButtonImage(zahlen, "src/Pictos/Adjektive/schoen.png");
         createButtonImage(kategorie1, "src/Pictos/Adjektive/vorsichtig.png");
     }
-    
+
     public void kategorieAktivitaeten() {
         createButtonImage(adjektive, "src/Pictos/Aktivitaeten/arbeiten.png");
         createButtonImage(aktivitaeten, "src/Pictos/Aktivitaeten/putzen.png");
@@ -121,7 +130,7 @@ public class MainFrame extends JFrame {
         createButtonImage(zahlen, "src/Pictos/Aktivitaeten/Quidditch.png");
         createButtonImage(kategorie1, "src/Pictos/Aktivitaeten/spielen.png");
     }
-    
+
     public void kategorieBeduerfnisse() {
         createButtonImage(adjektive, "src/Pictos/Beduerfnisse/essen.png");
         createButtonImage(aktivitaeten, "src/Pictos/Beduerfnisse/baden.png");
@@ -155,27 +164,33 @@ public class MainFrame extends JFrame {
         createButtonImage(praepositionen, "src/Pictos/Farben/bunt.png");
         createButtonImage(verben, "src/Pictos/Farben/braun.png");
         createButtonImage(zahlen, "src/Pictos/Farben/grau.png");
-        createButtonImage(kategorie1, "src/Pictos/Zahlen/0.png"); //leer
+        setInvisibleButton(kategorie1);
+        //createButtonImage(kategorie1, "src/Pictos/Zahlen/0.png"); //leer
     }
-    
+
     public void kategorieFloskeln() {
-        createButtonImage(adjektive, "src/Pictos/Floskeln/hell.png");
-        createButtonImage(aktivitaeten, "src/Pictos/Zahlen/0.png");//leer
-        createButtonImage(beduerfnisse, "src/Pictos/Zahlen/0.png");//leer
+        createButtonImage(adjektive, "src/Pictos/Floskeln/Hallo.png");
+        setInvisibleButton(aktivitaeten);
+        // createButtonImage(aktivitaeten, "src/Pictos/Zahlen/0.png");//leer
+        setInvisibleButton(beduerfnisse);
+        // createButtonImage(beduerfnisse, "src/Pictos/Zahlen/0.png");//leer
         createButtonImage(farben, "src/Pictos/Floskeln/Tschuess.png");
         createButtonImage(floskeln, "src/Pictos/Floskeln/Entschuldigung.png");
         createButtonImage(gefuehle, "src/Pictos/Floskeln/Danke.png");
-        createButtonImage(fragen, "src/Pictos/Zahlen/0.png");//leer
+        setInvisibleButton(fragen);
+        // createButtonImage(fragen, "src/Pictos/Zahlen/0.png");//leer
         createButtonImage(kleidung, "src/Pictos/Floskeln/fertig.png");
-        createButtonImage(koerper, "src/Pictos/Zahlen/0.png");
-        createButtonImage(orte, "src/Pictos/Zahlen/0.png");//leer
+        setInvisibleButton(koerper);
+        // createButtonImage(koerper, "src/Pictos/Zahlen/0.png");
+        setInvisibleButton(orte);
+        //createButtonImage(orte, "src/Pictos/Zahlen/0.png");//leer
         createButtonImage(personen, "src/Pictos/Floskeln/Quatsch.png");
         createButtonImage(praepositionen, "src/Pictos/Floskeln/Bloedsinn.png");
         createButtonImage(verben, "src/Pictos/Floskeln/Arschloch.png");
         createButtonImage(zahlen, "src/Pictos/Floskeln/Bloedmann.png");
         createButtonImage(kategorie1, "src/Pictos/Floskeln/Dummkopf.png");
     }
-    
+
     public void kategorieGefuehle() {
         createButtonImage(adjektive, "src/Pictos/Gefuehle/Angst.png");
         createButtonImage(aktivitaeten, "src/Pictos/Gefuehle/traurig.png");
@@ -191,9 +206,10 @@ public class MainFrame extends JFrame {
         createButtonImage(praepositionen, "src/Pictos/Gefuehle/wach.png");
         createButtonImage(verben, "src/Pictos/Gefuehle/verliebt.png");
         createButtonImage(zahlen, "src/Pictos/Gefuehle/uebel.png");
-        createButtonImage(kategorie1, "src/Pictos/Zahlen/0.png");//leer
+        setInvisibleButton(kategorie1);
+        // createButtonImage(kategorie1, "src/Pictos/Zahlen/0.png");//leer
     }
-    
+
     public void kategorieFragen() {
         createButtonImage(adjektive, "src/Pictos/KategorieFragen/wie.png");
         createButtonImage(aktivitaeten, "src/Pictos/KategorieFragen/warum.png");
@@ -211,7 +227,7 @@ public class MainFrame extends JFrame {
         createButtonImage(zahlen, "src/Pictos/KategorieFragen/geben.png");
         createButtonImage(kategorie1, "src/Pictos/KategorieFragen/wissen.png");
     }
-    
+
     public void kategorieKleidung() {
         createButtonImage(adjektive, "src/Pictos/Kleidung/Kleidung.png");
         createButtonImage(aktivitaeten, "src/Pictos/Kleidung/Hose.png");
@@ -229,7 +245,7 @@ public class MainFrame extends JFrame {
         createButtonImage(zahlen, "src/Pictos/Kleidung/Socken.png");
         createButtonImage(kategorie1, "src/Pictos/Kleidung/Zopf.png");
     }
-    
+
     public void kategorieKoerper() {
         createButtonImage(adjektive, "src/Pictos/Koerper/Arm.png");
         createButtonImage(aktivitaeten, "src/Pictos/Koerper/Gesicht.png");
@@ -247,7 +263,7 @@ public class MainFrame extends JFrame {
         createButtonImage(zahlen, "src/Pictos/Koerper/Mund.png");
         createButtonImage(kategorie1, "src/Pictos/Koerper/Zaehne.png");
     }
-    
+
     public void kategorieOrte() {
         createButtonImage(adjektive, "src/Pictos/Orte/Arbeit.png");
         createButtonImage(aktivitaeten, "src/Pictos/Orte/Laden.png");
@@ -265,7 +281,7 @@ public class MainFrame extends JFrame {
         createButtonImage(zahlen, "src/Pictos/Orte/Keller.png");
         createButtonImage(kategorie1, "src/Pictos/Orte/Kueche.png");
     }
-    
+
     public void kategoriePersonen() {
         createButtonImage(adjektive, "src/Pictos/Personen/maennlich.png");
         createButtonImage(aktivitaeten, "src/Pictos/Personen/Baby.png");
@@ -281,7 +297,8 @@ public class MainFrame extends JFrame {
         createButtonImage(praepositionen, "src/Pictos/Personen/Mutter.png");
         createButtonImage(verben, "src/Pictos/Personen/Therapeut.png");
         createButtonImage(zahlen, "src/Pictos/Personen/Lehrer.png");
-        createButtonImage(kategorie1, "src/Pictos/Zahlen/0.png");//leer
+        setInvisibleButton(kategorie1);
+        // createButtonImage(kategorie1, "src/Pictos/Zahlen/0.png");//leer
     }
 
     public void kategoriePraepositionen() {
@@ -296,12 +313,12 @@ public class MainFrame extends JFrame {
         createButtonImage(koerper, "src/Pictos/Praepositionen/oben.png");
         createButtonImage(orte, "src/Pictos/Praepositionen/hinter.png");
         createButtonImage(personen, "src/Pictos/Praepositionen/weniger.png");
-        createButtonImage(praepositionen, "src/Pictos/Prapositionen/unten.png");
+        createButtonImage(praepositionen, "src/Pictos/Praepositionen/unten.png");
         createButtonImage(verben, "src/Pictos/Praepositionen/neben.png");
         createButtonImage(zahlen, "src/Pictos/Praepositionen/wieder.png");
-        createButtonImage(kategorie1, "src/Pictos/Paaepositionen/wenig.png");
+        createButtonImage(kategorie1, "src/Pictos/Praepositionen/wenig.png");
     }
-    
+
     public void kategorieVerben() {
         createButtonImage(adjektive, "src/Pictos/Verben/riechen.png");
         createButtonImage(aktivitaeten, "src/Pictos/Verben/schmecken.png");
@@ -319,44 +336,32 @@ public class MainFrame extends JFrame {
         createButtonImage(zahlen, "src/Pictos/Verben/schneiden.png");
         createButtonImage(kategorie1, "src/Pictos/Verben/streicheln.png");
     }
-    
+
     public void kategorieZahlen() {
         createButtonImage(adjektive, "src/Pictos/Zahlen/1.png");
         createButtonImage(aktivitaeten, "src/Pictos/Zahlen/2.png");
         createButtonImage(beduerfnisse, "src/Pictos/Zahlen/3.png");
-        createButtonImage(farben, "src/Pictos/Zahlen/0.png");//leer
+        setInvisibleButton(farben);
+        // createButtonImage(farben, "src/Pictos/Zahlen/0.png");//leer
         createButtonImage(floskeln, "src/Pictos/Zahlen/4.png");
         createButtonImage(gefuehle, "src/Pictos/Zahlen/5.png");
         createButtonImage(fragen, "src/Pictos/Zahlen/6.png");
-        createButtonImage(kleidung, "src/Pictos/Zahlen/0.png");//leer
+        setInvisibleButton(kleidung);
+        // createButtonImage(kleidung, "src/Pictos/Zahlen/0.png");//leer
         createButtonImage(koerper, "src/Pictos/Zahlen/7.png");
         createButtonImage(orte, "src/Pictos/Zahlen/8.png");
         createButtonImage(personen, "src/Pictos/Zahlen/9.png");
-        createButtonImage(praepositionen, "src/Pictos/Zahlen/0.png");//leer
-        createButtonImage(verben, "src/Pictos/Zahlen/0.png");//leer
-        createButtonImage(zahlen, "src/Pictos/Zahlen/0.png");
-        createButtonImage(kategorie1, "src/Pictos/Zahlen/0.png"); //leer
-    }
-    
-    public void kategorieUebersicht() {
-        createButtonImage(adjektive, "src/Pictos/KategorieAdjektive.png");
-        createButtonImage(aktivitaeten, "src/Pictos/KategorieAktivitaeten.png");
-        createButtonImage(beduerfnisse, "src/Pictos/KategorieBeduerfnisse.png");
-        createButtonImage(farben, "src/Pictos/KategorieFarben.png");
-        createButtonImage(floskeln, "src/Pictos/KategorieFloskeln.png");
-        createButtonImage(gefuehle, "src/Pictos/KategorieGefuehle.png");
-        createButtonImage(fragen, "src/Pictos/KategorieFragen.png");
-        createButtonImage(kleidung, "src/Pictos/KategorieKleidung.png");
-        createButtonImage(koerper, "src/Pictos/KategorieKoerper.png");
-        createButtonImage(orte, "src/Pictos/KategorieOrte.png");
-        createButtonImage(personen, "src/Pictos/KategoriePersonen.png");
-        createButtonImage(praepositionen, "src/Pictos/KategoriePraepositionen.png");
-        createButtonImage(verben, "src/Pictos/KategorieVerben.png");
-        createButtonImage(zahlen, "src/Pictos/KategorieZahlen.png");
-        createButtonImage(kategorie1, "src/Pictos/Zahlen/0.png");
+        setInvisibleButton(praepositionen);
+        // createButtonImage(praepositionen, "src/Pictos/Zahlen/0.png");//leer
+        setInvisibleButton(verben);
+        // createButtonImage(verben, "src/Pictos/Zahlen/0.png");//leer
+        setInvisibleButton(zahlen);
+        // createButtonImage(zahlen, "src/Pictos/Zahlen/0.png");
+        setInvisibleButton(kategorie1);
+        // createButtonImage(kategorie1, "src/Pictos/Zahlen/0.png"); //leer
     }
 
-    public void returnButtonUebersicht() {
+    public void kategorieUebersicht() {
         getAdjektive();
         adjektive.setText("Adjektive");
         getAktivitaeten();
@@ -368,8 +373,12 @@ public class MainFrame extends JFrame {
         getFloskeln();
         floskeln.setText("Floskeln");
         getGefuehle();
-        gefuehle.setText("gefuehle");
+        gefuehle.setText("Gefuehle");
         getFragen();
+        kleidung.setText("Kleidung");
+        getKleidung();
+        koerper.setText("Körper");
+        getKoerper();
         fragen.setText("Fragen");
         getOrte();
         orte.setText("Orte");
@@ -384,78 +393,77 @@ public class MainFrame extends JFrame {
         getKategorie1();
         kategorie1.setText("");
     }
-    
-    
-      public JButton getAdjektive() {
+
+    public JButton getAdjektive() {
         createButtonImage(adjektive, "src/Pictos/KategorieAdjektive.png");
         return adjektive;
-      }
-      
-      public JButton getAktivitaeten() {
-          createButtonImage(aktivitaeten, "src/Pictos/KategorieAktivitaeten.png");
-          return aktivitaeten;
     }
-      
-      public JButton getBeduerfnisse() {
-          createButtonImage(beduerfnisse, "src/Pictos/KategorieBeduerfnisse.png");
-          return beduerfnisse;
-        }
-      
-      public JButton getFarben() {
-          createButtonImage(farben, "src/Pictos/KategorieFarben.png");
-          return farben;
-        }
-      
-      public JButton getFloskeln() {
-          createButtonImage(floskeln, "src/Pictos/KategorieFloskeln.png");
-          return floskeln;
-        }
-      
-      public JButton getGefuehle() {
-          createButtonImage(gefuehle, "src/Pictos/KategorieGefuehle.png");
-          return gefuehle;
-        }
-      
-      public JButton getFragen() {
-          createButtonImage(fragen, "src/Pictos/KategorieFragen.png");
-          return fragen;
-        }
-      
-      public JButton getKleidung() {
-          createButtonImage(kleidung, "src/Pictos/KategorieKleidung.png");
-          return kleidung;
-        }
-      
-      public JButton getKoerper() {
-          createButtonImage(koerper, "src/Pictos/KategorieKoerper.png");
-          return koerper;
-        }
-      
-      public JButton getOrte() {
-          createButtonImage(orte, "src/Pictos/KategorieOrte.png");
-          return orte;
-        }
-      
-      public JButton getPersonen() {
-          createButtonImage(personen, "src/Pictos/KategoriePersonen.png");
-          return personen;
-        }
-      
-      public JButton getPraepositionen() {
-          createButtonImage(praepositionen, "src/Pictos/KategoriePraepositionen.png");
-          return praepositionen;
-        }
-      
-      public JButton getVerben() {
-          createButtonImage(verben, "src/Pictos/KategorieVerben.png");
-          return verben;
-        }
-      
-      public JButton getZahlen() {
-          createButtonImage(zahlen, "src/Pictos/KategorieZahlen.png");
-          return zahlen;
-        }
-      
+
+    public JButton getAktivitaeten() {
+        createButtonImage(aktivitaeten, "src/Pictos/KategorieAktivitaeten.png");
+        return aktivitaeten;
+    }
+
+    public JButton getBeduerfnisse() {
+        createButtonImage(beduerfnisse, "src/Pictos/KategorieBeduerfnisse.png");
+        return beduerfnisse;
+    }
+
+    public JButton getFarben() {
+        createButtonImage(farben, "src/Pictos/KategorieFarben.png");
+        return farben;
+    }
+
+    public JButton getFloskeln() {
+        createButtonImage(floskeln, "src/Pictos/KategorieFloskeln.png");
+        return floskeln;
+    }
+
+    public JButton getGefuehle() {
+        createButtonImage(gefuehle, "src/Pictos/KategorieGefuehle.png");
+        return gefuehle;
+    }
+
+    public JButton getFragen() {
+        createButtonImage(fragen, "src/Pictos/KategorieFragen.png");
+        return fragen;
+    }
+
+    public JButton getKleidung() {
+        createButtonImage(kleidung, "src/Pictos/KategorieKleidung.png");
+        return kleidung;
+    }
+
+    public JButton getKoerper() {
+        createButtonImage(koerper, "src/Pictos/KategorieKoerper.png");
+        return koerper;
+    }
+
+    public JButton getOrte() {
+        createButtonImage(orte, "src/Pictos/KategorieOrte.png");
+        return orte;
+    }
+
+    public JButton getPersonen() {
+        createButtonImage(personen, "src/Pictos/KategoriePersonen.png");
+        return personen;
+    }
+
+    public JButton getPraepositionen() {
+        createButtonImage(praepositionen, "src/Pictos/KategoriePraepositionen.png");
+        return praepositionen;
+    }
+
+    public JButton getVerben() {
+        createButtonImage(verben, "src/Pictos/KategorieVerben.png");
+        return verben;
+    }
+
+    public JButton getZahlen() {
+        createButtonImage(zahlen, "src/Pictos/KategorieZahlen.png");
+        return zahlen;
+    }
+
     public JComboBox getSetVoiceBox() {
         setVoiceBox.addItem("DE1 Frau");
         setVoiceBox.addItem("DE2 Mann");
@@ -464,32 +472,32 @@ public class MainFrame extends JFrame {
     }
 
     public JButton getOder() {
-    	createButtonImage(oder, "src/Pictos/oder.png");
+        createButtonImage(oder, "src/Pictos/oder.png");
         return oder;
     }
 
     public JButton getMoechten() {
-    	createButtonImage(moechten, "src/Pictos/moechten.png");
+        createButtonImage(moechten, "src/Pictos/moechten.png");
         return moechten;
     }
 
     public JButton getKoennen() {
-    	createButtonImage(koennen, "src/Pictos/koennen.png");
+        createButtonImage(koennen, "src/Pictos/koennen.png");
         return koennen;
     }
 
     public JButton getHaben() {
-    	createButtonImage(haben, "src/Pictos/haben.png");
+        createButtonImage(haben, "src/Pictos/haben.png");
         return haben;
     }
 
     public JButton getAuch() {
-    	createButtonImage(auch, "src/Pictos/auch.png");
+        createButtonImage(auch, "src/Pictos/auch.png");
         return auch;
     }
 
     public JButton getSein() {
-    	createButtonImage(sein, "src/Pictos/sein.png");
+        createButtonImage(sein, "src/Pictos/sein.png");
         return sein;
     }
 
@@ -544,7 +552,7 @@ public class MainFrame extends JFrame {
     }
 
     public JButton getKategorie1() {
-        createButtonImage(kategorie1, "src/Pictos/Zahlen/0.png");
+        setInvisibleButton(kategorie1);
         return kategorie1;
     }
 
